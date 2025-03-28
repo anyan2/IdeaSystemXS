@@ -1,0 +1,27 @@
+# ideaSystemXS 依赖列表
+
+# 基础依赖
+PyQt6
+
+
+
+# 数据库依赖
+
+chromadb
+
+
+# AI功能依赖
+openai
+numpy
+scikit-learn
+sentence-transformers
+
+# 系统集成依赖
+keyboard
+
+pyinstaller
+
+# 工具依赖
+python-dotenv
+requests
+tqdm
