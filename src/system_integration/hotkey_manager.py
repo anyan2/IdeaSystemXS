@@ -6,8 +6,8 @@ from typing import Callable, Dict, Optional
 
 import keyboard
 
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 
 
 class HotkeyManager:

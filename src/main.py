@@ -16,9 +16,9 @@ parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 
 # 导入核心模块
-from core.app_manager import AppManager
-from core.config_manager import ConfigManager
-from core.event_system import EventSystem
+from src.core.app_manager import AppManager
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 
 # 设置日志
 def setup_logging():
@@ -46,8 +46,8 @@ def main():
     logger.info("启动 ideaSystemXS...")
     
     # 设置高DPI支持
-    QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
-    QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps, True)
+    #QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+    #QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps, True)
     
     # 创建应用程序实例
     app = QApplication(sys.argv)

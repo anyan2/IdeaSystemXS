@@ -6,8 +6,8 @@ from typing import Optional
 
 from PyQt6.QtWidgets import QSystemTrayIcon
 
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 
 
 class NotificationManager:

@@ -11,9 +11,9 @@ from PyQt6.QtWidgets import (
     QTextEdit, QVBoxLayout, QWidget
 )
 
-from ..business.idea_manager import IdeaManager
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.business.idea_manager import IdeaManager
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 from .theme_manager import ThemeManager
 from .ui_utils import AnimationHelper, RoundedRectWidget, ShadowEffect
 

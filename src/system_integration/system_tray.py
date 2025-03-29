@@ -6,8 +6,8 @@ from typing import Optional
 from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtWidgets import QSystemTrayIcon, QMenu
 
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 
 
 class SystemTray:
@@ -25,6 +25,8 @@ class SystemTray:
         self._event_system = event_system or EventSystem()
         self._tray_icon = None
         self._tray_menu = None
+        #self._tray_icon = QSystemTrayIcon(self)
+        #self._tray_icon.setIcon(QIcon("./icon.png"))
         
         # 初始化系统托盘
         self._init_tray()

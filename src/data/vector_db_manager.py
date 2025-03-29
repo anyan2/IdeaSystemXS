@@ -8,7 +8,7 @@ import chromadb
 from chromadb.config import Settings
 from chromadb.utils import embedding_functions
 
-from ..core.config_manager import ConfigManager
+from src.core.config_manager import ConfigManager
 
 
 class VectorDBManager:

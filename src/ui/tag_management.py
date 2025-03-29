@@ -10,9 +10,9 @@ from PyQt6.QtWidgets import (
     QListWidgetItem, QPushButton, QVBoxLayout, QWidget
 )
 
-from ..business.tag_manager import TagManager
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.business.tag_manager import TagManager
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 from .theme_manager import ThemeManager
 from .ui_utils import RoundedRectWidget, ShadowEffect
 

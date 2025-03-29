@@ -6,7 +6,7 @@ import sqlite3
 import threading
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from ..core.config_manager import ConfigManager
+from src.core.config_manager import ConfigManager
 
 
 class DatabaseManager:

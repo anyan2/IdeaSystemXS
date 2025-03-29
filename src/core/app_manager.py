@@ -4,52 +4,60 @@
 import sys
 from typing import Optional
 
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
-from ..data.database_manager import DatabaseManager
-from ..data.vector_db_manager import VectorDBManager
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
+from src.data.database_manager import DatabaseManager
+from src.data.vector_db_manager import VectorDBManager
 
 
 class AppManager:
     """应用管理器类，负责应用程序的生命周期管理。"""
+    def start(self):
 
+        return self.start_app()
+    def initialize_app(self):
+    
+        return self.initialize()
     _instance = None
 
-    def __new__(cls):
+    def __new__(cls, config_manager=None, event_system=None):
         """
-        实现单例模式。
+        实现单例模式，确保只创建一个实例。
+
+        Args:
+            config_manager: 配置管理器实例
+            event_system: 事件系统实例
 
         Returns:
-            AppManager实例
+            AppManager 实例
         """
         if cls._instance is None:
             cls._instance = super(AppManager, cls).__new__(cls)
-            cls._instance._initialized = False
+            cls._instance._initialized = False  # 标记未初始化
         return cls._instance
 
-    def __init__(self):
-        """初始化应用管理器。"""
+    def __init__(self, config_manager=None, event_system=None):
+        """初始化应用管理器，确保只执行一次"""
         if self._initialized:
-            return
+            return  # 已初始化，直接返回
 
-        # 初始化核心组件
-        self._config_manager = ConfigManager()
-        self._event_system = EventSystem()
-        
+        self._config_manager = config_manager or ConfigManager()
+        self._event_system = event_system or EventSystem()
+
         # 初始化数据层组件
         self._database_manager = DatabaseManager(self._config_manager)
         self._vector_db_manager = VectorDBManager(self._config_manager)
-        
+
         # 其他组件将在需要时初始化
         self._hotkey_manager = None
         self._window_manager = None
         self._system_tray = None
         self._notification_manager = None
         self._ai_manager = None
-        
+
         # 标记为已初始化
         self._initialized = True
-        
+
         # 注册事件处理器
         self._register_event_handlers()
 
@@ -187,7 +195,7 @@ class AppManager:
             self._ai_manager = AIManager(self._config_manager, self._event_system, self._database_manager, self._vector_db_manager)
         return self._ai_manager
 
-    def initialize_app(self):
+    def initialize(self):
         """初始化应用程序。"""
         # 初始化快捷键管理器
         self.get_hotkey_manager()

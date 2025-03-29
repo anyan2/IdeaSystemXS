@@ -10,11 +10,11 @@ from PyQt6.QtWidgets import (
     QLineEdit, QPushButton, QScrollArea, QSlider, QVBoxLayout, QWidget
 )
 
-from ..business.idea_manager import IdeaManager
-from ..business.search_engine import SearchEngine
-from ..business.tag_manager import TagManager
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.business.idea_manager import IdeaManager
+from src.business.search_engine import SearchEngine
+from src.business.tag_manager import TagManager
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 from .theme_manager import ThemeManager
 from .ui_utils import RoundedRectWidget, ShadowEffect
 

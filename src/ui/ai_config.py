@@ -10,9 +10,9 @@ from PyQt6.QtWidgets import (
     QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget
 )
 
-from ..ai.ai_service import AIService
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.ai.ai_service import AIService
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 from .theme_manager import ThemeManager
 from .ui_utils import RoundedRectWidget, ShadowEffect
 

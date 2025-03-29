@@ -1,0 +1,41 @@
+{
+    "general": {
+        "theme": "light",
+        "language": "zh_CN",
+        "first_run": false
+    },
+    "hotkeys": {
+        "show_input": "Ctrl+Alt+I",
+        "save_idea": "Ctrl+Enter"
+    },
+    "database": {
+        "sqlite_path": "D:\\library\\developIDEAS\\autogen\\ideaSystemXS\\data\\ideas.db",
+        "vector_db_path": "D:\\library\\developIDEAS\\autogen\\ideaSystemXS\\data\\vector_db",
+        "backup_dir": "D:\\library\\developIDEAS\\autogen\\ideaSystemXS\\data\\backups",
+        "auto_backup": true,
+        "backup_interval_days": 7
+    },
+    "ai": {
+        "enabled": true,
+        "api_url": "https://api.openai.com/v1",
+        "api_key": "",
+        "model": "gpt-3.5-turbo",
+        "embedding_model": "text-embedding-ada-002",
+        "max_tokens": 1000,
+        "temperature": 0.7,
+        "offline_mode": false
+    },
+    "ui": {
+        "font_size": 12,
+        "window_width": 800,
+        "window_height": 600,
+        "opacity": 0.95,
+        "blur_effect": true,
+        "animation_speed": 300
+    },
+    "reminders": {
+        "enabled": true,
+        "check_interval_minutes": 30,
+        "notification_sound": true
+    }
+}

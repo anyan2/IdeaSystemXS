@@ -11,8 +11,8 @@ from PyQt6.QtWidgets import (
     QStackedWidget, QTabWidget, QVBoxLayout, QWidget
 )
 
-from ..core.config_manager import ConfigManager
-from ..core.event_system import EventSystem
+from src.core.config_manager import ConfigManager
+from src.core.event_system import EventSystem
 from .theme_manager import ThemeManager
 from .ui_utils import RoundedRectWidget, ShadowEffect
 

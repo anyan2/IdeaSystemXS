@@ -92,7 +92,7 @@ class RoundedRectWidget(QWidget):
         
         # 创建圆角矩形路径
         path = QPainterPath()
-        path.addRoundedRect(QRect(0, 0, self.width(), self.height()), self._radius, self._radius)
+        path.addRoundedRect(QRectF(0, 0, self.width(), self.height()), self._radius, self._radius)
         
         # 设置裁剪区域
         painter.setClipPath(path)
